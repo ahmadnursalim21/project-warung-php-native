@@ -1,5 +1,5 @@
 <?php
-require "../database/database.php";
+require "database/database.php";
 
 if (isset($_POST['submit'])) {
     $name = $_POST['name'];
@@ -30,13 +30,13 @@ if (isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page | Regsiter</title>
 
-    <link rel="stylesheet" href="../public/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="public/bootstrap/css/bootstrap.css">
 </head>
 
 <body>
-    <div class="d-grid">
-        <div class="shadow-lg rounded-3" style="width: 300px;">
-            <h2>Register Akun</h2>
+    <div class="d-flex justify-content-center align-items-center vh-100">
+        <div class="card p-4 shadow-lg rounded-3" style="width: 300px;">
+            <h2 class="text-center mb-3">Register Akun</h2>
             <form action="
         register.php" method="POST">
                 <div class="mb-3">
@@ -55,20 +55,19 @@ if (isset($_POST['submit'])) {
                     <label for="password" class="form-label">Password</label>
                     <input type="password" class="form-control" id="password" name="password" required>
                 </div>
-                <div>
+                <div class="d-grid mt-3">
 
                     <button type="submit" name="submit" class="btn btn-primary">Register</button>
                 </div>
-                <div>
-                    <p>Sudah mempunyai akun ?</p>
-                    <a href="login.php">login akun</a>
+                <div class="text-center mt-3">
+                    <p>Sudah mempunyai akun ? <a href="login.php">login akun</a></p>
                 </div>
             </form>
         </div>
     </div>
 
 
-    <script src="../public/bootstrap/js/bootstrap.js"></script>
+    <script src="public/bootstrap/js/bootstrap.js"></script>
 </body>
 
 </html>
