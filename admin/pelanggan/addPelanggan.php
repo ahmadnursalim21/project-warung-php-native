@@ -1,5 +1,6 @@
 <?php
-require "../../database/database.php";
+require_once "../../middleware/admin.php";
+require_once "../../database/database.php";
 if (isset($_POST["submit"])) {
     $nama = $_POST["nama_pelanggan"];
     $email = $_POST["email"];

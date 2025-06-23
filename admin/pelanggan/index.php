@@ -1,5 +1,6 @@
 <?php
-require "../../database/database.php";
+require_once "../../middleware/admin.php";
+require_once "../../database/database.php";
 
 
 $sql = "SELECT * FROM pelanggan";
@@ -22,7 +23,7 @@ $result = mysqli_query($conn, $sql);
 </head>
 
 <body>
-    <?php require "../../layouts/header.php" ?>
+    <?php require "../sidebar.php" ?>
 
     <table class="table" border="1">
         <thead>
@@ -38,17 +39,17 @@ $result = mysqli_query($conn, $sql);
         <tbody>
 
             <?php foreach ($result as $r): ?>
-                <tr>
-                    <td scope="row"><?= $r['id_pelanggan'] ?></td>
-                    <td scope="row"><?= $r['nama_pelanggan'] ?></td>
-                    <td scope="row"><?= $r['email'] ?></td>
-                    <td scope="row"><?= $r['no_hp'] ?></td>
-                    <td scope="row"><?= $r['alamat'] ?></td>
-                    <td>
-                        <a href="" class="btn btn-success">Edit</a>
-                        <a href="" class="btn btn-danger">Hapus</a>
-                    </td>
-                </tr>
+            <tr>
+                <td scope="row"><?= $r['id_pelanggan'] ?></td>
+                <td scope="row"><?= $r['nama_pelanggan'] ?></td>
+                <td scope="row"><?= $r['email'] ?></td>
+                <td scope="row"><?= $r['no_hp'] ?></td>
+                <td scope="row"><?= $r['alamat'] ?></td>
+                <td>
+                    <a href="" class="btn btn-success">Edit</a>
+                    <a href="" class="btn btn-danger">Hapus</a>
+                </td>
+            </tr>
             <?php endforeach ?>
 
         </tbody>

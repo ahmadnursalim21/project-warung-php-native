@@ -1,5 +1,6 @@
 <?php
-require "database/database.php";
+require_once "../../middleware/admin.php";
+require_once "../../database/database.php";
 
 
 $sql = "SELECT * FROM penjualan";
@@ -21,11 +22,11 @@ $result = mysqli_query($conn, $sql)
 </head>
 
 <body>
-    <?php require "layouts/header.php" ?>
+    <?php require "../sidebar.php" ?>
 
 
     <p>test ini admin Penjualan</p>
-    <?php require "layouts/footer.php" ?>
+    <?php require "../footer.php" ?>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"

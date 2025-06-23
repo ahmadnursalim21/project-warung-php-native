@@ -1,3 +1,9 @@
+<?php
+require_once "../middleware/admin.php";
+require_once "../database/database.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,9 +15,14 @@
 </head>
 
 <body>
-    <?php include "sidebar.php" ?>
-
-
+    <div class="d-flex">
+        <?php include "sidebar.php" ?>
+        <!-- Main Content -->
+        <div class="p-4 flex-grow-1">
+            <h1>Selamat Datang</h1>
+            <p>Ini adalah konten utama halaman dashboard.</p>
+        </div>
+    </div>
     <?php include "footer.php" ?>
     <script src="../public/bootstrap/js/bootstrap.js"></script>
 </body>

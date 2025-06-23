@@ -1,5 +1,5 @@
 <?php
-
+require_once "middleware/auth.php";
 // Contoh total (biasanya dari session atau keranjang)
 $totalBayar = 175000;
 ?>

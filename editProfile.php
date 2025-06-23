@@ -1,3 +1,7 @@
+<?php
+require_once "middleware/auth.php";
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 

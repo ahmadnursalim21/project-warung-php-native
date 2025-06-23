@@ -1,5 +1,6 @@
 <?php
-require "../../database/database.php";
+require_once "../../middleware/admin.php";
+require_once "../../database/database.php";
 
 
 $sql = "SELECT * FROM pelanggan";

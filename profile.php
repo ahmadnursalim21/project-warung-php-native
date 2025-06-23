@@ -1,4 +1,6 @@
 <?php
+require_once "middleware/auth.php";
+
 $user = [
     'username' => $_SESSION['username'] ?? 'guest',
     'email' => 'user@example.com',

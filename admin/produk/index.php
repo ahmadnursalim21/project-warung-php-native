@@ -1,11 +1,10 @@
 <?php
-require "database/database.php";
+require "../../database/database.php";
+require "../../middleware/admin.php";
 
 
 $sql = "SELECT * FROM produk";
-$result = mysqli_query($conn, $sql)
-
-
+$result = mysqli_query($conn, $sql);
 ?>
 
 
@@ -21,11 +20,11 @@ $result = mysqli_query($conn, $sql)
 </head>
 
 <body>
-    <?php require "layouts/header.php" ?>
+    <?php require "../sidebar.php" ?>
 
 
     <p>test ini admin produk</p>
-    <?php require "layouts/footer.php" ?>
+    <?php require "../footer.php" ?>
 
 </body>
 

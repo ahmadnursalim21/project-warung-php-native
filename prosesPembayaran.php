@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once "middleware//auth.php";
 require_once 'database/database.php'; // file koneksi ke database
 
 // Ambil data dari form

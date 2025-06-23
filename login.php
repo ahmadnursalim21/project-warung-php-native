@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once "middleware/isLogin.php";
 require "database/database.php";
 
 if (isset($_POST['submit'])) {
@@ -16,6 +17,7 @@ if (isset($_POST['submit'])) {
             // Simpan session
             $_SESSION['user_id'] = $row['id_pelanggan'];
             $_SESSION['username'] = $row['nama_pelanggan'];
+            $_SESSION['role'] = $row['role'];
 
             // Redirect ke halaman utama
             header("Location: index.php");

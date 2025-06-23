@@ -1,5 +1,6 @@
 <?php
-require "../../database/database.php";
+require_once "../../database/database.php";
+require_once "../../middleware/admin.php";
 
 
 $sql = "SELECT * FROM produk";
@@ -21,7 +22,7 @@ $result = mysqli_query($conn, $sql)
 </head>
 
 <body>
-    <?php require "../../layouts/header.php" ?>
+    <?php require "../sidebar.php" ?>
 
     <div class="container mt-4">
         <h2 class="mb-4">Tambah Produk Baru</h2>
@@ -53,7 +54,7 @@ $result = mysqli_query($conn, $sql)
         </form>
     </div>
 
-    <?php require "../../layouts/footer.php" ?>
+    <?php require "../footer.php" ?>
 
 </body>
 
